@@ -2,10 +2,10 @@
 
 Lanzamos un contenedor que incluye los procesos necesarios para
 
-1. Yarn
-2. HDFS
+1. **Yarn**
+2. **HDFS**
 
-También incluye Jupyter Notebook. Tiene todos los puertos necesarios abiertos
+También incluye **Jupyter Notebook**. Tiene todos los puertos necesarios abiertos
 
 * 50070 Para el NameNode de HDFS
 * 8088 Para el ResourceManager de YARN
@@ -47,7 +47,7 @@ Podemos lanzar un notebook de Jupyter. Usará el puerto 8888, que está mapeado 
 [I 10:01:19.592 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
 
-Abrimo el enlace "http://127.0.0.1:8888" y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
+Abrimos el enlace "http://127.0.0.1:8888" y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
 
 También podemos copiar el fichero que está en repositorio e ir ejecutándolo. 
 
