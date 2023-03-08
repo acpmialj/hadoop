@@ -1,5 +1,7 @@
 # hadoop
 
+NOTA: es importante que la máquina (física o virtual) en la que se ejecuta Docker tenga asignada bastante RAM. Con 2 GB puede haber problemas de ejecución (tareas MapReduce enviadas a YARN que nunca se procesan). Con 8 GB no ocurre este problema. 
+
 Lanzamos un contenedor que incluye los procesos necesarios para
 
 1. **Yarn**
