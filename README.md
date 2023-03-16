@@ -1,6 +1,16 @@
-# hadoop
+# HDFS y MapReduce
+En este repositorio hay tres notebooks Jupyter, con diferentes propósitos
 
-NOTA: es importante que la máquina (física o virtual) en la que se ejecuta Docker tenga asignada bastante RAM. Con 2 GB puede haber problemas de ejecución (tareas MapReduce enviadas a YARN que nunca se procesan). Con 8 GB no ocurre este problema. 
+## Parquet
+Para su ejecución directa (sin contenedores). Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Requiere tener instalado el paquete **pyarrow**, además de Jupyter. 
+
+## Python_mapred
+También para su ejecución directa. Se experimenta con funciones *mapper* y *reducer* escritas en Python. 
+
+## MapReduce
+Para su ejecución en un contenedor Docker. 
+
+**NOTA**: es importante que la máquina (física o virtual) en la que se ejecuta Docker tenga asignada bastante RAM. Con 2 GB puede haber problemas de ejecución (tareas MapReduce enviadas a YARN que nunca se procesan). Con 8 GB no ocurre este problema. 
 
 Lanzamos un contenedor que incluye los procesos necesarios para
 
