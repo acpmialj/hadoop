@@ -2,7 +2,9 @@
 En este repositorio hay tres notebooks Jupyter, con diferentes propósitos
 
 ## Parquet
-Para su ejecución directa (sin contenedores). Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Requiere tener instalado el paquete **pyarrow**, además de Jupyter. 
+Para su ejecución directa (sin contenedores). Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Dicho fichero está almacenado en ~/Downloads. 
+
+La ejecución del notebook requiere tener instalado el paquete **pyarrow**, además de Jupyter. 
 
 ## Python_mapred
 También para su ejecución directa. Se experimenta con funciones *mapper* y *reducer* escritas en Python. 
