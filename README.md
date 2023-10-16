@@ -1,10 +1,12 @@
 # HDFS y MapReduce
 En este repositorio hay varios notebooks Jupyter, con diferentes propósitos.
 
-## Parquet (ejecución local)
-Para su ejecución directa (sin contenedores). Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Dicho fichero está almacenado en ~/Downloads. 
+## Parquet (ejecución local o en contenedor)
+Para su ejecución directa (sin contenedores). Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Dicho fichero está almacenado en el directorio de trabajo. 
 
-La ejecución del notebook requiere tener instalado el paquete **pyarrow**, además de Jupyter. 
+La ejecución del notebook requiere tener instalados los paquetes **pyarrow** y **pandas**, además de Jupyter. 
+
+Se puede ejecutar todo en el contenedor hadoop (ver más abajo): lanzar el contenedor, lanzar jupyter-lab, conectarse con el navegador al URL indicado por jupyter, puerto 8888 (que está mapeado con el puerto 8888 del anfitrión). 
 
 ## Python_mapred (ejecución local o en contenedor)
 También para su ejecución directa. Se experimenta con funciones *mapper* y *reducer* escritas en Python. 
