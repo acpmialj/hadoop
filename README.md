@@ -21,7 +21,7 @@ Lanzamos un contenedor que incluye los procesos necesarios para **Hadoop** y **J
 Para ejecutar el contenedor:
 
 ```shell
-$ mkdir hadoop
+$ git clone https://github.com/acpmialj/hadoop.git # Para construir los notebooks desde cero: mkdir hadoop 
 $ cd hadoop
 $ docker run --rm -it -v "$PWD":/workspace --name hadoop -p 8888:8888 -p 50070:50070 -p 8088:8088 jdvelasq/hadoop:2.10.1
 ```
