@@ -54,7 +54,7 @@ Desde el shell del contenedor, lanzamos Jupyter (jupyter-notebook o jupyter-lab)
 [I 10:01:19.592 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
 
-Abrimos el enlace "http://127.0.0.1:8888" y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
+Abrimos el enlace que empieza por "http://127.0.0.1:8888" y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
 
 Con este entorno en marcha, podemos trabajar con los notebooks de este repositorio. Podemos ir escribiendo cada celda paso a paso (copiar-pegar) o descargar los notebooks del repositorio y trabajar sobre ellos. Nótese que el contenedor puede acceder, vía /workspace, a los ficheros que están en la carpeta desde la cual se ha lanzado el contenedor. 
 
