@@ -26,7 +26,7 @@ $ cd hadoop
 $ docker run --rm -it -v "$PWD":/workspace --name hadoop -p 8888:8888 -p 50070:50070 -p 8088:8088 jdvelasq/hadoop:2.10.1
 ```
 
-El resultado:
+El resultado: se lanza el contenedor con los servicios de HDFS y Yarn en marcha. Se nos facilitan los enlaces de acceso al NameNode de HDFS, y al ResourceManager de Yarn. Además, en el terminal pasaremos a estar dentro de un "shell" que se ejecuta en el contenedor. 
 
 ```shell
 ---------------------< stack >---------------------
@@ -40,10 +40,9 @@ El resultado:
      http://127.0.0.1:8088/
 ---------------------------------------------------
 ```
+Comprobamos que funcionan ambos enlaces. Recordemos que si salimos del shell (con Ctrl-D o "exit") el contenedor será destruido. 
 
-Comprobamos que funcionan ambos enlaces. Además, estamos dentro de un "shell" del contenedor. Al salir del shell (con Ctrl-D o "exit") el contenedor desaparece. 
-
-Desde el shell del contenedor, lanzamos Jupyter (jupyter-notebook o jupyter-lab). Usará el puerto 8888, que está mapeado al del host. 
+Jupyter no está aún en marcha. Lo lanzamos desde el shell del contenedor hadoop (jupyter-notebook o jupyter-lab). Jupyter usará el puerto 8888, que está mapeado al mismo puerto del host. 
 
 ```shell
 # jupyter notebook 
@@ -54,9 +53,7 @@ Desde el shell del contenedor, lanzamos Jupyter (jupyter-notebook o jupyter-lab)
 [I 10:01:19.592 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
 
-Abrimos el enlace que empieza por "http://127.0.0.1:8888/..." y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
-
-Con este entorno en marcha, podemos trabajar con los notebooks de este repositorio. Podemos ir escribiendo cada celda paso a paso (copiar-pegar) o descargar los notebooks del repositorio y trabajar sobre ellos. Nótese que el contenedor puede acceder, vía /workspace, a los ficheros que están en la carpeta desde la cual se ha lanzado el contenedor. 
+Abrimos el enlace que empieza por "http://127.0.0.1:8888/..." y accedemos a un directorio de notebooks. Podemos crear nuevos (botón new..." de tipo Python3 o usar los ya disponibles (los descargados desde GitHub, que se encuentran en el directorio actual del host, mapeado al directorio "/workspace" del contenedor). 
 
 ## Uso de ficheros en formato Parquet
 Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Dicho fichero está almacenado en el directorio de trabajo. 
