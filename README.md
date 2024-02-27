@@ -54,11 +54,11 @@ Desde el shell del contenedor, lanzamos Jupyter (jupyter-notebook o jupyter-lab)
 [I 10:01:19.592 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 ```
 
-Abrimos el enlace que empieza por "http://127.0.0.1:8888" y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
+Abrimos el enlace que empieza por "http://127.0.0.1:8888/..." y accedemos a un directorio de notebooks. Creamos uno nuevo (botón new..." de tipo Python3. Ya podemos empezar a introducir comandos. 
 
 Con este entorno en marcha, podemos trabajar con los notebooks de este repositorio. Podemos ir escribiendo cada celda paso a paso (copiar-pegar) o descargar los notebooks del repositorio y trabajar sobre ellos. Nótese que el contenedor puede acceder, vía /workspace, a los ficheros que están en la carpeta desde la cual se ha lanzado el contenedor. 
 
-## Parquet
+## Uso de ficheros en formato Parquet
 Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresión. El fichero de datos está obtenido de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page, 2022, Febrero, Yellow Taxi Trip Records. Dicho fichero está almacenado en el directorio de trabajo. 
 
 La ejecución de los comandos de este notebook requiere tener instalados los paquetes **pyarrow** y **pandas**. 
@@ -66,7 +66,7 @@ La ejecución de los comandos de este notebook requiere tener instalados los paq
 Este cçodigo se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
 
 ## Python_mapred
-Se experimenta con funciones *mapper* y *reducer* escritas en Python, mostrando un ejemplo típico: el conteo de palabras. Este cçodigo se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
+Se experimenta con funciones *mapper* y *reducer* escritas en Python, mostrando un ejemplo típico: el conteo de palabras. Este código se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
 
 ## MapReduce 
 Se practica con ficheros HDFS y el marco MapReduce con Hadoop Streaming (mapper y reducer son programas externos, no funciones)
