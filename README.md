@@ -1,9 +1,10 @@
-# Ficheros Parquet, HDFS y MapReduce
+# Ficheros Parquet y Avro, HDFS y MapReduce
 En este repositorio hay varios notebooks Jupyter, con diferentes propósitos. Para ejecutar cualquiera de ellos se recomienda lanzar un contenedor con Python, Hadoop (HDFS, MapReduce, YARN) y Jupyter. 
 
 Los objetivos de aprendizade de estos notebooks son:
 
 * Entender el formato de ficheros Parquet
+* Entender el formato de ficheros Avro
 * Entender el modelo de procesamiento de MapReduce
 * Entender cómo trabajar con ficheros HDFS, y "verlos" desde la interfaz WebUI
 * Entender cómo funciona YARN, viendo los trabajos en ejecución y los realizados en la interfaz WebUI.
@@ -60,7 +61,19 @@ Experimenta con un fichero parquet no-HDFS: carga, escritura, esquema, compresi�
 
 La ejecución de los comandos de este notebook requiere tener instalados los paquetes **pyarrow** y **pandas**. 
 
-Este cçodigo se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
+Este código se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
+
+## Uso de ficheros en formato Avro
+Experimenta con un fichero Avro no-HDFS: carga, esquema, consulta SQL. El fichero de datos está obtenido de https://github.com/tensorflow/io/raw/master/docs/tutorials/avro/train.avro. En el mismo sitio está el fichero de esquema, !curl -OL https://github.com/tensorflow/io/raw/master/docs/tutorials/avro/train.avsc. Ambos ficheros se descargan con curl y quedan almacenados en el directorio de trabajo. 
+
+La ejecución de los comandos de este notebook requiere tener instalados los paquetes **avro**, **pandas** y **pandasql**. 
+
+Este código se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
+
+1. Se abre un fichero Avro y se vuelcan sus contenidos (en formato JSON). Internamente los datos son binarios.
+2. Se obtiene el esquema (en formato JSON) de los datos almacenados en el fichero. Se puede comparar con el obtenido vía curl.
+3. Se leen otra vez los datos del fichero, y se transforman en un dataframe de Pandas.
+4. Se transforma el dataframe, eliminando la primera columna. Se realizan dos consultas SQL sobre el dataframe resultante. 
 
 ## Python_mapred
 Se experimenta con funciones *mapper* y *reducer* escritas en Python, mostrando un ejemplo típico: el conteo de palabras. Este código se podría ejecutar directamente en el anfitrión, no necesita ninguna característica especial del contenedor (no usa ningún módulo de Hadoop). 
