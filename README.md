@@ -15,7 +15,7 @@ Los objetivos de aprendizade de estos notebooks son:
 
 Lanzamos un contenedor que incluye los procesos necesarios para **Hadoop** y **Jupyter**. El contenedor usa los siguientes puertos:
 
-* 50070 Para el NameNode de HDFS
+* 50070 Para el NameNode de HDFS -- el uso de este puerto puede dar problemas en hosts windows. Hacer un mapeo diferente al propuesto al ejecutar el contenedor, por ejemplo "-p 10070:50070"
 * 8088 Para el ResourceManager de YARN
 * 8888 Para Jupyter
 
